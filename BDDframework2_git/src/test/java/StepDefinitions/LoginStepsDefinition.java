@@ -1,0 +1,51 @@
+//package StepDefinitions;
+//
+//import java.time.Duration;
+//
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//import org.testng.Assert;
+//
+//import io.cucumber.java.en.Given;
+//import io.cucumber.java.en.Then;
+//import io.cucumber.java.en.When;
+//
+//public class LoginStepsDefinition {
+//	
+//	WebDriver driver;
+//	@Given("User is on login page")
+//	public void user_is_on_login_page() {
+//		
+//	    driver = new ChromeDriver();
+//	    driver.manage().window().maximize();
+//	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//	    driver.get("https://rahulshettyacademy.com/client");
+//	}
+//
+//	@When("User enters valid {string} and {string}")
+//	public void user_enters_valid_and(String username, String password) {
+//		driver.findElement(By.id("userEmail")).sendKeys(username);
+//		driver.findElement(By.id("userPassword")).sendKeys(password);
+//	}
+//
+//	@When("Clicks on login button")
+//	public void clicks_on_login_button() {
+//		
+//		driver.findElement(By.id("login")).click();
+//	}
+//
+//	@Then("User is navigate to home page")
+//	public void user_is_navigate_to_home_page() {
+//		
+//		Assert.assertTrue(driver.findElements(By.xpath("//h3[normalize-space()='Automation']")).size()>0, "User is navigate to home page");
+//	    
+//	}
+//
+//	@Then("Close the browser")
+//	public void close_the_browser() {
+//		driver.close();
+//	    
+//	}
+//
+//}
